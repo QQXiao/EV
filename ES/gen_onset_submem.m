@@ -19,7 +19,7 @@ MPM=15; % p memory
 Mcond=16;
 
 basedir='/seastor/helenhelen/ES';
-
+datadir=sprintf('%s/behavior/data',basedir)
 %cd results
 
 % subs=[15];
@@ -30,7 +30,7 @@ sub_ex=[1 3 15 16]; % what is wrong with sub 15 &16??
 %[19 31] NaN in some conditions;
 subs(sub_ex)=[];
 
-cd result
+cd(datadir)
 %% combine files for every sub
 for sub=1:size(subs,2)
     subid=subs(sub); subln=[];

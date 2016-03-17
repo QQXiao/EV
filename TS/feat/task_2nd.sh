@@ -1,0 +1,16 @@
+#!/bin/sh
+basedir=/seastor/helenhelen/TS
+for m in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 25
+do
+    if [ ${m} -lt 10 ];
+    then
+       SUB=sub0${m}
+    else
+        SUB=sub${m}
+    fi
+    echo $SUB
+scriptdir=/home/helenhelen/DQ/project/TS/feat/design
+outputdir=/home/helenhelen/DQ/project/TS/feat/fsf
+#sed -e "s/sub01/${SUB}/g" $scriptdir/task_2nd.fsf > $outputdir/task_${SUB}_2nd.fsf
+fsl_sub feat $outputdir/task_${SUB}_2nd.fsf
+done
